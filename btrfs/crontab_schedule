@@ -1,0 +1,5 @@
+0 * * * * btrfs subvolume delete /snapshots/hourly && btrfs subvolume snapshot / /snapshots/hourly
+0 2,4,6,8,10,12,14,16,18,20,22,0 * * * btrfs subvolume delete /snapshots/every_other_hourly && btrfs subvolume snapshot / /snapshots/every_other_hourly
+0 0 * * * btrfs subvolume delete /snapshots/daily && btrfs subvolume snapshot / /snapshots/daily
+0 0 * * 1 btrfs subvolume delete /snapshots/weekly && btrfs subvolume snapshot / /snapshots/weekly
+0 0 1 * * btrfs subvolume delete /snapshots/monthly && btrfs subvolume snapshot / /snapshots/monthly
