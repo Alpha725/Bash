@@ -5,6 +5,8 @@ exit 0
 
 [ -f crontab_schedule ] || bad_dir
 
+[ -f /snapshots ] || sudo mkdir /snapshots
+
 [ -f /snapshots/hourly ] && sudo btrfs subvolume snapshot / /snapshots/hourly
 [ -f /snapshots/every_other_hourly ] && sudo btrfs subvolume snapshot / /snapshots/every_other_hourly
 [ -f /snapshots/daily ] && sudo btrfs subvolume snapshot / /snapshots/daily
