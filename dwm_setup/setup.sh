@@ -1,4 +1,4 @@
-sudo apt-get install -y build-essential libx11-dev libxinerama-dev sharutils suckless-tools libxft-dev stterm gcc
+sudo apt-get install -y build-essential libx11-dev libxinerama-dev sharutils suckless-tools libxft-dev stterm gcc xdm
 cd /usr/local/src
 sudo wget http://dl.suckless.org/dwm/dwm-6.2.tar.gz
 sudo tar xvzf dwm-6.2.tar.gz
